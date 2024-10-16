@@ -60,7 +60,7 @@ function predictNote(event) {
 
         note3.placeholder=` ${result2.toFixed(2)}`
         result.style.color = 'black';
-        result.textContent = `${userName}, te falta mucho para pasar la materia. Necesitas: ${result2.toFixed(2)}`;
+        result.textContent = `${userName}, no es posible pasar la materia . `;
 
     } else if (result2 < 0) {
 
@@ -71,7 +71,7 @@ function predictNote(event) {
     } else {
         note3.placeholder=` ${result2.toFixed(2)}`
         result.style.color = 'blue';
-        result.textContent = `${userName}, necesitas sacar al menos: ${result2.toFixed(2)} para pasar la materia.`;
+        result.textContent = `${userName},  te falta poco para pasar la materia.`;
     }
 
 }
