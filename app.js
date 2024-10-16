@@ -19,10 +19,10 @@ function calculateNote(event) {
     
     if (result1 >= 1 && result1 < 3.5) {
         result.style.color = 'black';
-        result.textContent = `${userName} has perdido la materia con ${result1}`;
+        result.textContent = `${userName} has perdido la materia en ${result1}`;
     } else if (result1 >= 3.5 && result1 < 4.5) {
         result.style.color = 'orange';
-        result.textContent = `${userName} has ganado la materia con ${result1}`;
+        result.textContent = `${userName} has ganado la materia en ${result1}`;
     } else if (result1 >= 4.5 && result1 <= 5) {
         result.style.color = 'green';
         result.textContent = `${userName} has ganado la materia con ${result1} (sobresaliente)`;
@@ -48,12 +48,15 @@ function predictNote(event) {
     let result2 = (notaMinima - (data1 * 0.3) - (data2 * 0.3)) / 0.4;
 
     if (result2 > 5.0) {
+        note3.placeholder=` ${result2.toFixed(2)}`
         result.style.color = 'black';
         result.textContent = `${userName}, te falta mucho para pasar la materia. Necesitas: ${result2.toFixed(2)}`;
     } else if (result2 < 0) {
+        note3.placeholder=` ${result2.toFixed(2)}`
         result.style.color = 'green';
         result.textContent = `${userName}, ya tienes suficiente para pasar la materia.`;
     } else {
+        note3.placeholder=` ${result2.toFixed(2)}`
         result.style.color = 'blue';
         result.textContent = `${userName}, necesitas sacar al menos: ${result2.toFixed(2)} para pasar la materia.`;
     }
